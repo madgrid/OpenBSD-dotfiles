@@ -1,0 +1,57 @@
+# vim: syntax=sh
+# ksh aliases to make a life just a tad bit more bearable
+
+# handy dandy system related
+alias ls="colorls -GF"
+alias l="ls"
+alias ll="ls -lhA"
+alias df="df -h"
+alias cp="cp -r"
+alias chown="chown -R"
+alias mkdir="mkdir -p"
+alias md="mkdir -p"
+
+alias c="clear"
+alias reload=". $HOME/.kshrc"
+alias usr1="pkill -USR1"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# package management
+alias pkga="sudo pkg_add"
+alias pkgu="sudo pkg_add -u"
+alias pkgd="sudo pkg_delete"
+alias pkgi="pkg_info"
+alias pkgq="pkg_info -Q"
+alias pkgl="pkg_locate"
+
+alias daim="doas make install"
+
+# colorized logs for easier perusal
+alias dlog="colortail -k  /usr/local/share/examples/colortail/conf.daemon -f /var/log/daemon"
+alias mlog="colortail -k  /usr/local/share/examples/colortail/conf.messages -f /var/log/messages"
+alias slog="colortail -k  /usr/local/share/examples/colortail/conf.secure -f /var/log/secure"
+alias alog="colortail -k  /usr/local/share/examples/colortail/conf.authlog -f /var/log/authlog"
+
+# text editors
+alias vi="vim"
+alias vim="vim"
+alias e="emacs"
+alias em="emacs"
+
+# misc
+alias xclip="xclip -selection clipboard"
+alias xr="xrdb -merge ~/.Xresources"
+alias dash="dash -l"
+
+# git
+alias gc="git clone"
+alias ga="git add"
+alias grm="git rm"
+alias gcm="git commit -m"
+alias gp="git push"
+alias gpom="git push origin master"
+alias gpod="git push origin devel"
+

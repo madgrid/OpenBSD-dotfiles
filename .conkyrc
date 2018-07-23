@@ -1,0 +1,11 @@
+out_to_x no
+own_window no
+out_to_console yes
+#background no
+#max_text_width 0
+# Update interval in seconds
+update_interval 2.0
+total_run_times 0
+ 
+TEXT
+[ V ${exec mixerctl outputs.master | cut -d "=" -f2 | cut -d "," -f1} ] [ C ${loadavg} ]${if_mpd_playing} [ $mpd_artist - ${mpd_title} ]$endif [ M $memperc% ] [ B ${apm_battery_life} ] [ T ${time %I:%M} ]
